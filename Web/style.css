@@ -62,6 +62,8 @@ nav {
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
 	position: fixed;
+/*    önemli olan sayısal değer sayfa üstündeki diğer elemanlardan z-indexi yüksek olması yeterli*/
+    z-index: 500;
 }
 
 #logo-box {
@@ -111,4 +113,34 @@ header {
 header h1 {
 	color:  #fff;
 	font-size: 7.6rem;
+}
+
+header h2{
+    color: #fff;
+    font-size: 2.8rem;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+.star-light{
+    border: none;
+    border-top: .4rem solid #fff;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+/*    üzerine başka bir şey geldiğinde gözükür yapar*/
+    overflow: visible;
+    height: 0;
+}
+
+.star-light::after{
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    color: #fff;
+/*    iconun içini doldurmak için kalınlığını arttırdık*/
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -26px;
+    background-color: #18bc9c;
+    padding: 0 .8rem;
 }
