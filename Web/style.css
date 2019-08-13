@@ -20,6 +20,16 @@ a {
 	text-decoration: none;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .container {
 	width: 1140px;
 	margin-left: auto;
@@ -38,8 +48,13 @@ nav {
 	font-family: Montserrat;
 	background-color: #2C3E50;
 	color: #fff;
-	padding-top: 2.9rem;
-	padding-bottom: 2.9rem;
+	padding-top: 2.4rem;
+	padding-bottom: 2.4rem;
+}
+
+#logo-box {
+	float: left;
+	padding-top: .5rem;
 }
 
 #logo-box .logo {
@@ -47,3 +62,28 @@ nav {
 	font-weight: 700;
 	font-size: 3.2rem;
 }
+
+#nav-links {
+	float: right;
+}
+
+#nav-links .nav-item {
+	float: left;
+	margin: .4rem;
+}
+
+#nav-links .nav-link {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	display: block;
+	padding: 1.6rem;
+	letter-spacing: .1rem;
+	transition: color .3s;
+}
+
+#nav-links .nav-link:hover {
+	color: #18bc9c;
+}
+
+
