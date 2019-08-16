@@ -5,7 +5,7 @@
 }
 
 html {
-	font-size: 10px;
+	font-size: 10px; 
 }
 
 body {
@@ -14,6 +14,12 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	background-color: #fff;
+}
+
+section{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,6 +33,55 @@ a {
 
 ul {
 	list-style-type: none;
+}
+
+
+
+.btn{
+    margin-top: 4rem;
+    font-weight: 400;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn-social{
+ width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.btn-large{
+    font-size: 2rem;
+    padding: 2.2rem 1.6rem;
+}
+
+.btn-outline{
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.btn-outline:hover{
+    color: #212529;
+    background-color: #fff;
+}
+
+.btn-primary{
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+    padding: 1.2rem 1rem;
+    color: #fff;
+    
+}
+
+.btn-primary:hover{
+    background-color: #128f76;
+    border-color: #128f76;
 }
 
 .img-fluid {
@@ -62,6 +117,8 @@ nav {
 	padding-top: 2.4rem;
 	padding-bottom: 2.4rem;
 	position: fixed;
+/*    önemli olan sayısal değer sayfa üstündeki diğer elemanlardan z-indexi yüksek olması yeterli*/
+    z-index: 500;
 }
 
 #logo-box {
@@ -111,4 +168,207 @@ header {
 header h1 {
 	color:  #fff;
 	font-size: 7.6rem;
+}
+
+header h2{
+    color: #fff;
+    font-size: 2.8rem;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+.star-light, .star-dark{
+    border: none;
+    border-top: .4rem solid;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+/*    üzerine başka bir şey geldiğinde gözükür yapar*/
+    overflow: visible;
+    height: 0;
+}
+
+.star-light{
+    border-color: #fff;
+}
+
+.star-dark{
+    border-color: #2c3e50;
+}
+
+.star-light::after, .star-dark::after{
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+/*    iconun içini doldurmak için kalınlığını arttırdık*/
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -26px;
+    padding: 0 .8rem;
+}
+
+.star-light::after{
+    color: #fff;
+    background-color: #18bc9c;
+}
+
+.star-dark::after{
+    color: #2c3e50;
+    background-color: #fff;
+}
+
+
+/*Portfolio*/
+
+
+#portfolio{
+}
+
+#portfolio h2{
+    font-size: 4.8rem;
+    color: #2c3e50;
+}
+
+
+.col{
+    float: left;
+    width: 33.33333%;
+    padding: 1rem;
+}
+
+.portfolio-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-item img{
+    display: block;
+}
+
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18bc9c;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.img-overlay .icon{
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.portfolio-item:hover .img-overlay{
+    opacity: 0.8;
+}
+
+
+/*About*/
+
+#about{
+    background-color: #18bc9c;
+    color: #fff;
+}
+
+#about h2{
+    font-size: 4.8rem;
+}
+
+#about-text{
+    text-align: left;
+}
+
+#about-text .left{
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 23rem;
+}
+
+#about-text .right{
+    float: right;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 23rem;
+}
+
+#about-text .text{
+    font-size: 2rem;
+}
+
+/*Contact*/
+
+#contact h2{
+    font-size: 4.8rem;
+    color: #2c3e50;
+}
+
+#contact-form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-group{
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.form-group:last-child{
+    border: none;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+    resize: none;
+}
+
+.form-group input:focus, .form-group textarea:focus{
+/*    text kısmına focus olup birşey yazmak istediğimizde etrafında çıkan kenarlıkları yok eder*/
+    outline: 0;
+}
+
+
+/*Footer*/
+
+footer{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+}
+
+footer h4{
+    font-size: 2.4rem;
+}
+
+footer p{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer li{
+    display:inline-block;
+    margin-right: 1rem;
+}
+
+.copyright{
+    background-color: #1a252f;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: #fff;
+    text-align: center;
 }
