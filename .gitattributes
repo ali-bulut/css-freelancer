@@ -1,1 +1,2 @@
-src/main/webapp/resources/html/* linguist-vendored
+* linguist-vendored
+*.css linguist-vendored=false
